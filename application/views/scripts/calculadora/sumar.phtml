@@ -1,0 +1,13 @@
+<?php
+
+//En PHP 5.4 podríamos haber puesto $this->getVariables['resultado']
+//pero en PHP anterior a 5.4 es necesario crear una variable temporal
+//http://us2.php.net/manual/en/language.types.array.php (Example #7 Array dereferencing)
+//Como tengo instalado PHP 5.3, para que sea más elegante usamos directamente la propiedad
+
+//Podemos acceder a $this->_viewVariables porque este fichero está siendo incluido con un require en la clase
+//library/View.php
+
+?>
+
+El resultado de la suma es: <?php echo $this->_viewVariables['resultado']; ?>
